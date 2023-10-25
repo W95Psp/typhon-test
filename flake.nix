@@ -20,7 +20,11 @@
           echo '${name}'
           for i in $(seq 0 1 100); do
             printf "% 4d%s\n" $i '%'
-            if [[ "$i" -eq '${toString fails}' ]]; then
+            if [[ "$i" -eq "${
+            if fails == false
+            then "101"
+            else toString fails
+          }" ]]; then
               echo "failure" 1>&2
               exit 1
             fi
