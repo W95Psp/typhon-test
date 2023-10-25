@@ -23,7 +23,7 @@
             if [[ "$i" -eq '${toString fails}' ]];
               echo "failure" 1>&2
               exit 1
-            done
+            fi
             sleep '${toString duration}'
           done
           export PREFIX=$out
