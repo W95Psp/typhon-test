@@ -34,11 +34,11 @@
               fi
               sleep '${toString duration}'
             done
-            echo "${
+            ${
             if infinite
-            then "repeting"
-            else "compiling now"
-          }"
+            then "echo repeting"
+            else "echo compiling now ; break"
+          }
           done
           export PREFIX=$out
         '';
